@@ -37,8 +37,15 @@ function draw() {
     
     rect(item_width * i + offset, height,item_width * building_girth,-max_height * height_percentage);
 
-    text(val.name,item_width * i + offset + 20,height - 50);
-    text(val.location,item_width * i + offset + 20, height - 25);
+    // text(val.name,item_width * i + offset + 20,height - 50);
+    // text(val.location,item_width * i + offset + 20, height - 25);
+    push();
+    translate(item_width * (i + 1) - offset,height);
+    rotate(-HALF_PI);
+    translate(10,-10);
+    textSize(25);
+    text(val.name + ", " + val.location,0,0);
+    pop();
 
   }
 }
