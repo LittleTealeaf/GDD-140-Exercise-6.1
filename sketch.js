@@ -2,7 +2,6 @@
 
 class Building {
   constructor(line) {
-    // console.log(line);
     var vals = line.split(",");
     this.name = vals[0];
     this.location = vals[1].substring(1);
